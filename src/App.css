@@ -4,17 +4,17 @@
     box-sizing: border-box;
 }
 #button{
-    border-radius: 50%;
-    height:1rem;
+    border-radius:1%;
+    height: 1.5rem;
     background-color:#284729 !important;
 }
 #button1{
-    border-radius: 50%;
-    height:1rem;
+    border-radius: 1%;
+    height:1.5rem;
     background-color:#9c2614 !important;
 }
 #button2{
-    border-radius: 50%;
-    height:1rem;
+    border-radius: 1%;
+    height:1.5rem;
     background-color:#563169 !important;
 }

@@ -12,14 +12,12 @@ export default function TextForm(props) {
   };
 
   const handleUpperCase = () => {
-    console.log("UpperCase was clicked");
     let newText = text.toUpperCase();
     setText(newText);
     props.showAlert("Converted to UpperCase", "success");
   };
 
   const handleLowerCase = () => {
-    console.log("LowerCase was clicked");
     let newText = text.toLowerCase();
     setText(newText);
     props.showAlert("Converted to LowerCase", "success");
@@ -52,9 +50,7 @@ export default function TextForm(props) {
   };
 
   const handleCopy = () => {
-    var text = document.getElementById("myBox");
-    text.select();
-    navigator.clipboard.writeText(text.value);
+    navigator.clipboard.writeText(text);
     props.showAlert("Text is copied successfully", "success");
   }
 
@@ -93,7 +89,7 @@ export default function TextForm(props) {
         <div className="container">
           <h2>Your text summary</h2>
           <p>
-            Number of Words:{text.split(" ").filter((element)=>{return element.length!=0}).length} <br />
+            Number of Words:{text.split(/\s+/).filter((element)=>{return element.length!=0}).length} <br />
             Number of Characters: {charCount} <br />
             Number of words can be read in {0.008 * count} minutes <br />
             Number of Sentences: {sentenceCount} <br />
